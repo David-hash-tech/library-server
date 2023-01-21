@@ -1,0 +1,99 @@
+USE master if exists (
+	select *
+	from sys.databases
+	where name = 'POO'
+) DROP DATABASE POO ------------------------------------------------------
+CREATE DATABASE POO ON PRIMARY (
+	Name = POOData1,
+	Filename = 'D:\DB\POO\POO.mdf',
+	size = 10MB,
+	maxsize = 50MB,
+	filegrowth = 10MB
+),
+(
+	Name = POOData2,
+	Filename = 'D:\DB\POO\POO.ndf',
+	size = 10MB,
+	maxsize = 50MB,
+	filegrowth = 10MB
+) LOG ON (
+	Name = POOLog,
+	Filename = 'D:\DB\POO\POO.ldf',
+	size = 10MB,
+	maxsize = 50MB,
+	filegrowth = 10MB
+) USE POO CREATE TABLE TipUser (
+	IDTipUser int PRIMARY KEY IDENTITY (1, 1),
+	Denumire nvarchar(20) NOT NULL
+) CREATE TABLE Abonament (
+	IDAbonament int PRIMARY KEY IDENTITY (0, 1),
+	Denumire nvarchar(20)
+) CREATE TABLE ListaArticole (
+	IDArticol int PRIMARY KEY IDENTITY (1, 1),
+	Nume nvarchar(30) NOT NULL,
+	TipArticol int NOT NULL
+) CREATE TABLE Carte (
+	IDCarte int PRIMARY KEY IDENTITY(1, 1),
+	IDAbonament int FOREIGN KEY REFERENCES Abonament(IDAbonament),
+	Nume nvarchar(30) NOT NULL,
+	Autor nvarchar(30) NOT NULL,
+	DataPublicare nvarchar(20) NOT NULL,
+	Editura nvarchar(20) NOT NULL,
+	NrPagini int NOT NULL,
+	Exemplare int NOT NULL,
+	Descriere nvarchar(200),
+	Imagine image,
+	PDF nvarchar(100)
+) CREATE TABLE Ziar (
+	IDZiar int PRIMARY KEY IDENTITY (1, 1),
+	IDAbonament int FOREIGN KEY REFERENCES Abonament(IDAbonament),
+	Nume nvarchar(20) NOT NULL,
+	DataTiparire date NOT NULL,
+	PDF nvarchar(100)
+) CREATE TABLE Revista (
+	IDRevista int PRIMARY KEY IDENTITY (1, 1),
+	IDAbonament int FOREIGN KEY REFERENCES Abonament(IDAbonament),
+	Nume nvarchar(20) NOT NULL,
+	DataTiparire date NOT NULL,
+	Editura nvarchar(20) NOT NULL,
+	NrPagini int NOT NULL,
+	PDF nvarchar(100)
+) CREATE TABLE Useri (
+	IDUseri int PRIMARY KEY IDENTITY (1, 1),
+	IDAbonament int FOREIGN KEY REFERENCES Abonament(IDAbonament),
+	IDTipUser int FOREIGN KEY REFERENCES TipUser(IDTipUser),
+	Username nvarchar(30) NOT NULL,
+	Parola nvarchar(30) NOT NULL,
+	Nume nvarchar(20) NOT NULL,
+	Prenume nvarchar(20) NOT NULL,
+	Ocupatie nvarchar(30) NOT NULL,
+	CNP nvarchar(13) NOT NULL,
+	Email nvarchar(30) NOT NULL,
+	Telefon nvarchar (15) NOT NULL
+) CREATE TABLE Imprumut (
+	IDImprumut int PRIMARY KEY IDENTITY (1, 1),
+	Username nvarchar(30) NOT NULL,
+	Carte nvarchar(30) NOT NULL,
+	DataImprumut date NOT NULL,
+	DataRetur date NOT NULL
+)
+go if exists (
+		select *
+		from sys.objects
+		where type = 'TR'
+			and name = 'UpDateRet'
+	) drop trigger UpDateRet
+go create trigger UpDateRet on Imprumut instead of
+insert as begin
+declare @DataImprumut date,
+	@username nvarchar(30),
+	@Carte nvarchar(30),
+	@DataRetur date
+select @Username = i.Username,
+	@Carte = i.Carte
+from inserted as i
+select @DataImprumut = CONVERT(varchar, GETDATE(), 23)
+select @DataRetur = DATEADD(day, 14, @DataImprumut)
+insert into Imprumut(Username, Carte, DataImprumut, DataRetur)
+values (@Username, @Carte, @DataImprumut, @DataRetur)
+end
