@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Exception">
+      <UniqueIdentifier>{2095a6b3-b9a8-418a-bf16-09118370351c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Query">
+      <UniqueIdentifier>{73b6ddf4-36a3-4647-8b7f-c0ae2d64fbc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Users">
+      <UniqueIdentifier>{1e168360-502a-48d3-a250-8ff6ea4fb88a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exception">
+      <UniqueIdentifier>{0fdcf8e3-2358-41fa-bf69-5cb0817b7743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Query">
+      <UniqueIdentifier>{abe2895a-3533-4013-b7e3-c6205a102496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Users">
+      <UniqueIdentifier>{06e872bc-acc6-4cda-bd95-f20d570c82ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Articol">
+      <UniqueIdentifier>{de0f8f6f-cc93-4664-864d-048fd523d7b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Articol">
+      <UniqueIdentifier>{946dc187-d102-4a4d-9730-a21ffa2ff3f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SystemMaintenance">
+      <UniqueIdentifier>{b99210de-8dd4-4744-a7c3-a33520b797d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SystemMaintenance">
+      <UniqueIdentifier>{0cc87e19-87c1-4f25-8aca-761d4f91d128}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AbsException.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="AbsQuery.cpp">
+      <Filter>Source Files\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="AbsUser.cpp">
+      <Filter>Source Files\Users</Filter>
+    </ClCompile>
+    <ClCompile Include="Bibliotecar.cpp">
+      <Filter>Source Files\Users</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Source Files\Users</Filter>
+    </ClCompile>
+    <ClCompile Include="Delete.cpp">
+      <Filter>Source Files\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryQuery.cpp">
+      <Filter>Source Files\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryUser.cpp">
+      <Filter>Source Files\Users</Filter>
+    </ClCompile>
+    <ClCompile Include="Insert.cpp">
+      <Filter>Source Files\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="Update.cpp">
+      <Filter>Source Files\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="Select.cpp">
+      <Filter>Source Files\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="InvalidCommand.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryCreation.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="QueryExecution.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="retainSelect.cpp">
+      <Filter>Source Files\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="UserScheduler.cpp">
+      <Filter>Source Files\Users</Filter>
+    </ClCompile>
+    <ClCompile Include="WrongLogin.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="WrongPassword.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="WrongUsername.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="AbsArticol.cpp">
+      <Filter>Source Files\Articol</Filter>
+    </ClCompile>
+    <ClCompile Include="Carte.cpp">
+      <Filter>Source Files\Articol</Filter>
+    </ClCompile>
+    <ClCompile Include="Revista.cpp">
+      <Filter>Source Files\Articol</Filter>
+    </ClCompile>
+    <ClCompile Include="Ziar.cpp">
+      <Filter>Source Files\Articol</Filter>
+    </ClCompile>
+    <ClCompile Include="Imprumut.cpp">
+      <Filter>Source Files\Articol</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryArticol.cpp">
+      <Filter>Source Files\Articol</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBaseConn.cpp">
+      <Filter>Source Files\SystemMaintenance</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files\SystemMaintenance</Filter>
+    </ClCompile>
+    <ClCompile Include="SendMsg.cpp">
+      <Filter>Source Files\SystemMaintenance</Filter>
+    </ClCompile>
+    <ClCompile Include="Server.cpp">
+      <Filter>Source Files\SystemMaintenance</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UniqueUsername.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="NotEnoughBooks.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionDenied.cpp">
+      <Filter>Source Files\Exception</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IException.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="InvalidCommand.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryCreation.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryExecution.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="AbsException.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="AbsQuery.h">
+      <Filter>Header Files\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryQuery.h">
+      <Filter>Header Files\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="IQuery.h">
+      <Filter>Header Files\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="Insert.h">
+      <Filter>Header Files\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="Select.h">
+      <Filter>Header Files\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="Update.h">
+      <Filter>Header Files\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="Delete.h">
+      <Filter>Header Files\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="AbsUser.h">
+      <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="IUser.h">
+      <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="Bibliotecar.h">
+      <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="UserScheduler.h">
+      <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryUser.h">
+      <Filter>Header Files\Users</Filter>
+    </ClInclude>
+    <ClInclude Include="RetainSelect.h">
+      <Filter>Header Files\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="WrongLogin.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="WrongPassword.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="WrongUsername.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="AbsArticol.h">
+      <Filter>Header Files\Articol</Filter>
+    </ClInclude>
+    <ClInclude Include="IArticol.h">
+      <Filter>Header Files\Articol</Filter>
+    </ClInclude>
+    <ClInclude Include="Revista.h">
+      <Filter>Header Files\Articol</Filter>
+    </ClInclude>
+    <ClInclude Include="Ziar.h">
+      <Filter>Header Files\Articol</Filter>
+    </ClInclude>
+    <ClInclude Include="Carte.h">
+      <Filter>Header Files\Articol</Filter>
+    </ClInclude>
+    <ClInclude Include="Imprumut.h">
+      <Filter>Header Files\Articol</Filter>
+    </ClInclude>
+    <ClInclude Include="TipAbonament.h">
+      <Filter>Header Files\Articol</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryArticol.h">
+      <Filter>Header Files\Articol</Filter>
+    </ClInclude>
+    <ClInclude Include="TipArticol.h">
+      <Filter>Header Files\Articol</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBaseConn.h">
+      <Filter>Header Files\SystemMaintenance</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files\SystemMaintenance</Filter>
+    </ClInclude>
+    <ClInclude Include="SendMsg.h">
+      <Filter>Header Files\SystemMaintenance</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Header Files\SystemMaintenance</Filter>
+    </ClInclude>
+    <ClInclude Include="UniqueUsername.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="NotEnoughBooks.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionDenied.h">
+      <Filter>Header Files\Exception</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Contact.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Program.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
